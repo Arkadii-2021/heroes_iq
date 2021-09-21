@@ -1,11 +1,12 @@
 import requests
 
-url_heroes_list = ['https://superheroapi.com/api/2619421814940190/search/Captain America',
-                   'https://superheroapi.com/api/2619421814940190/search/Hulk',
-                   'https://superheroapi.com/api/2619421814940190/search/Thanos']
+names_heroes_list = ['Captain America', 'Hulk', 'Thanos']
+url = 'https://superheroapi.com/api/2619421814940190/search/'
+url_heroes_list = []
+for heroes in names_heroes_list:
+    url_heroes_list.append(url + heroes)
 
 list_heroes = []
-
 
 def heroes_list(url_s):
     for url in url_s:
